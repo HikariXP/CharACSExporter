@@ -1,0 +1,22 @@
+{
+  "name": "com.charsui.characsexporter",
+  "version": "0.0.1",
+  "displayName": "CharACSExporter",
+  "description": "Tool for load AddressablesContentState.bin file and convert it to a same",
+  "dependencies": {
+    "com.unity.nuget.newtonsoft-json": "3.0.1",
+    "com.unity.addressables": "1.19.4"
+  },
+  "keywords": [
+    "charsui",
+    "char",
+    "config"
+  ],
+  "author": {
+    "name": "CharSui",
+    "email": "charcharsui@gmail.com",
+    "url": "https://github.com/HikariXP"
+  },
+  "samples": [
+  ]
+}
