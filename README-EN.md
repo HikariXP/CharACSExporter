@@ -30,6 +30,7 @@ Exports the binary AddressablesContentState data into a structured JSON file.
 Facilitates detailed comparison and analysis of resource changes between different builds.
 
 # Usage
+![](./img.jpg)  
 In the Unity Editor, navigate to the top menu: Tools -> CharSui -> Export AddressableContentState to JSON.
 
 A file dialog will appear. Select the source AddressablesContentState.bin file you wish to convert.

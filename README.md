@@ -12,4 +12,5 @@ Unity的Addressable本身是好用的，对于单机游戏而言。
 
 # 功能
 点击Untiy上面的Tools/CharSui/Export AddressableContentState to JSON，依次选择需要反编译的内容、导出的路径
+![](./img.jpg)
 
