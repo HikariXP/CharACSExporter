@@ -11,6 +11,6 @@ Unity的Addressable本身是好用的，对于单机游戏而言。
 将Addressables用来比较资源变动情况的清单addressablesContentState导出为json格式，用于做进一步的比较操作，比如用WinMerge和上一次的AddressablesContentState文件进行比较。
 
 # 功能
-点击Untiy上面的Tools/CharSui/Export AddressableContentState to JSON，依次选择需要反编译的内容、导出的路径
+点击Untiy上面的Tools/CharSui/Export AddressableContentState to JSON，依次选择需要反编译的内容、导出的路径  
 ![](./img.jpg)
 
