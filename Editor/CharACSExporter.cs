@@ -49,6 +49,7 @@ public class CharACSExporter
 
 		EditorUtility.ClearProgressBar();
 		File.WriteAllText(savePath, json);
+		Debug.Log("Exported Success, Path:" + savePath);
 	}
 	
 	public static AddressablesContentState LoadAddressablesContentState(string filePath)
