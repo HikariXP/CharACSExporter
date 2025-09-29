@@ -1,8 +1,8 @@
 {
-  "name": "com.charsui.characsexporter",
+  "name": "com.charsui.charaddressablestool",
   "version": "0.0.1",
-  "displayName": "CharACSExporter",
-  "description": "Tool for load AddressablesContentState.bin file and convert it to a same",
+  "displayName": "CharAddressablesTool",
+  "description": "Tool for Addressables",
   "dependencies": {
     "com.unity.nuget.newtonsoft-json": "3.0.1",
     "com.unity.addressables": "1.19.4"
