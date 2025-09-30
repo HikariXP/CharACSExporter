@@ -1,40 +1,19 @@
-# CharConfig
+# CharAddressableTools
 > This en readme use DeepSeek-V3 to translate
 
 [Chinese](README.md)
 [English](README-EN.md)
 
-# Overview
-Unity's Addressable Asset System is excellent for standalone games. However, when you need to use it for hot-updating (hot-fixing) live online games, you may find that some of its logic is poorly documented, and certain features can be abstract or unintuitive.
+Unity's Addressable system is quite useful by itself, especially for standalone games.
+However, when you need to use it for hot updates in live online games, you'll find that many aspects of the logic are poorly documented, and some features are even designed in an overly abstract manner.
+For example, certain version upgrades can cause errors in AddressableSettings, UI panels may not adapt properly, and after using AddressablesContentState.bin to check for updated resources, additional dependent resources might be incorrectly marked as "needing updates" but are actually bundled locally (and also listed as local in the manifest)...
 
-Common pain points include:
+# Available Tools
+## ACSExporter
+This tool exports the addressablesContentState manifest—used by Addressables to track resource changes—into JSON format. This allows for further comparison operations, such as using WinMerge to compare it with a previous AddressablesContentState file.
 
-Addressable settings can break after certain version upgrades.
+To use it, go to Tools/CharSui/Export AddressableContentState to JSON in the Unity editor, then sequentially select the content to be decompiled and the export path.
+https://./img.jpg
 
-The UI interface sometimes fails to adapt correctly.
-
-After using AddressablesContentState.bin to check for resource updates, more dependent resources than expected might be flagged for "update," even when they are already built locally (and listed as local in the catalog).
-
-This tool is designed to address one specific aspect of these challenges by providing better visibility into the update process.
-
-# Purpose
-This tool exports the addressablesContentState file (the manifest used by Addressables to compare resource changes) into a human-readable JSON format.
-
-Primary Use Case: Compare the current state with a previous AddressablesContentState file using external diff tools like WinMerge to analyze exactly what has changed between builds.
-
-# Features
-Simple one-click operation from the Unity Editor.
-
-Exports the binary AddressablesContentState data into a structured JSON file.
-
-Facilitates detailed comparison and analysis of resource changes between different builds.
-
-# Usage
-![](./img.jpg)  
-In the Unity Editor, navigate to the top menu: Tools -> CharSui -> Export AddressableContentState to JSON.
-
-A file dialog will appear. Select the source AddressablesContentState.bin file you wish to convert.
-
-Another dialog will appear. Choose the destination folder and filename for the exported JSON file.
-
-The tool will process the file and save the JSON output to your specified location. You can then open this JSON file in any text editor or diff tool.
+## RemoteConfigCheck
+If the configuration of an Addressables group is set to allow local updates for remote-related content, the remote manifest will attempt to fetch packages from the address of the build machine, which can lead to failures.
